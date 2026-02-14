@@ -1,0 +1,104 @@
+.about-page {
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.about-page__header {
+  max-width: var(--container-max);
+  margin: 0 auto var(--space-2xl);
+}
+
+.about-page__content {
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.about-page__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-brand-purple);
+  margin-bottom: var(--space-md);
+}
+
+.about-page__tagline {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  max-width: 600px;
+}
+
+.about-page__section {
+  margin-bottom: var(--space-2xl);
+}
+
+.about-page__section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: var(--color-brand-pink);
+  margin-bottom: var(--space-md);
+}
+
+
+.about-page__photo-wrap {
+  margin-bottom: var(--space-lg);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  width: 400px;
+  height: 400px;
+  transform: rotate(-3deg);
+}
+
+.about-page__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-page__emoji {
+  display: inline-block;
+  animation: aboutEmojiFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes aboutEmojiFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-2px) scale(1.08); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page__emoji {
+    animation: none;
+  }
+}
+
+.about-page__section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  max-width: 65ch;
+}
+
+.about-page__section a {
+  color: var(--color-brand-purple);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.about-page__section a:hover {
+  color: var(--color-brand-pink);
+}
+
+.about-page__moments {
+  list-style: none;
+  padding: 0;
+  margin: var(--space-md) 0;
+}
+
+.about-page__moments li {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  margin-bottom: var(--space-sm);
+  padding-left: 0;
+}

@@ -1,0 +1,60 @@
+.gallery-page {
+  padding: var(--space-2xl) var(--space-lg);
+}
+
+.gallery-page__header {
+  max-width: var(--container-max);
+  margin: 0 auto var(--space-2xl);
+}
+
+.gallery-page__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--color-brand-purple);
+  margin-bottom: var(--space-md);
+}
+
+.gallery-page__intro {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.gallery-page__intro a {
+  color: var(--color-brand-purple);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.gallery-page__intro a:hover {
+  color: var(--color-brand-pink);
+}
+
+/* Pinterest-style masonry grid */
+.gallery-stack {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  columns: 3;
+  column-gap: var(--space-md);
+}
+
+.gallery-photo {
+  break-inside: avoid;
+  margin-bottom: var(--space-md);
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.gallery-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: bottom;
+}
+
+@media (max-width: 768px) {
+  .gallery-stack {
+    columns: 2;
+  }
+}

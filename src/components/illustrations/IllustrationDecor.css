@@ -1,0 +1,16 @@
+.illustration-decor {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.15;
+  color: var(--color-brand-purple);
+}
+
+.illustration-decor--accent {
+  opacity: 0.2;
+  color: var(--color-brand-pink);
+}
+
+.illustration-decor--lime {
+  color: var(--color-brand-lime);
+  opacity: 0.12;
+}

@@ -1,0 +1,24 @@
+.custom-cursor {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  /* Icon tip at cursor position */
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s ease-out;
+}
+
+.custom-cursor--icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-cursor__icon {
+  color: var(--color-brand-purple);
+  transition: color 0.2s, transform 0.2s;
+}
+
+.custom-cursor--hover .custom-cursor__icon {
+  color: var(--color-brand-pink);
+  transform: scale(1.15);
+}
