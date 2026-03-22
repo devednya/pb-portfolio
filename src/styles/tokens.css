@@ -16,6 +16,10 @@
   --color-accent-natural: #B8E600;
   --color-bg-purple-light: #F5F0F8;
 
+  /* Hero brush canvas – paper under dry-brush strokes */
+  --hero-paper-bg: #faf8fc;
+  --hero-paper-grid: rgba(80, 16, 96, 0.04);
+
   /* Typography */
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: 'Nunito', system-ui, sans-serif;
