@@ -1,38 +1,226 @@
 .footer {
   margin-top: auto;
   background: var(--color-bg-alt);
+  padding: var(--space-lg) max(var(--space-sm), 4vw) var(--space-xl);
+  width: 100%;
+  box-sizing: border-box;
 }
 
-.footer__instagram-icon {
-  vertical-align: middle;
-  margin-right: 6px;
-}
-
-.footer__stripe {
-  height: 4px;
-  background: var(--color-brand-pink);
-}
-
-.footer__inner {
+.footer__wrap {
   max-width: var(--container-max);
   margin: 0 auto;
-  padding: var(--space-xl) var(--space-lg);
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-lg);
-  align-items: center;
-  justify-content: space-between;
+  width: 100%;
 }
 
-.footer__links {
+/* Taped card */
+.footer__card {
+  position: relative;
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(80, 16, 96, 0.08);
+  padding: var(--space-lg) var(--space-sm);
+  overflow: visible;
+}
+
+@media (min-width: 480px) {
+  .footer__card {
+    padding: var(--space-xl) var(--space-md);
+  }
+}
+
+.footer__tape {
+  display: none;
+}
+
+.footer__tape-svg path {
+  fill: var(--color-brand-pink);
+}
+
+@media (min-width: 768px) {
+  .footer__tape {
+    display: block;
+    position: absolute;
+    width: 80px;
+    height: 36px;
+    top: -1rem;
+    transform: scale(0.75);
+    transform-origin: top center;
+    pointer-events: none;
+    opacity: 0.92;
+  }
+
+  .footer__tape--left {
+    left: -2rem;
+  }
+
+  .footer__tape--right {
+    right: -2rem;
+    transform: scale(0.75) rotate(90deg);
+    transform-origin: center center;
+  }
+}
+
+.footer__card-inner {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xl);
+  padding: 0;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .footer__card-inner {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: clamp(2rem, 5vw, 3.5rem);
+    padding: 0 var(--space-lg);
+    text-align: left;
+  }
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 1 auto;
+  min-width: 0;
+  max-width: 22rem;
   gap: var(--space-md);
 }
 
-.footer__link {
-  font-size: 0.95rem;
+@media (min-width: 768px) {
+  .footer__brand {
+    align-items: flex-start;
+    max-width: 20rem;
+  }
+}
+
+.footer__logo-link {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  transition: opacity var(--transition-fast);
+}
+
+.footer__logo-link:hover {
+  opacity: 0.88;
+}
+
+.footer__logo-img {
+  width: 96px;
+  height: auto;
+  display: block;
+}
+
+@media (min-width: 480px) {
+  .footer__logo-img {
+    width: 112px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__logo-img {
+    width: 128px;
+  }
+}
+
+.footer__tagline {
+  font-size: clamp(0.9375rem, 2.8vw, 1rem);
+  font-weight: 500;
+  line-height: 1.55;
   color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 100%;
+}
+
+@media (min-width: 768px) {
+  .footer__tagline {
+    max-width: 19rem;
+  }
+}
+
+.footer__columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xl);
+  flex: 0 0 auto;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .footer__columns {
+    width: auto;
+    justify-content: flex-start;
+    margin-left: clamp(0.5rem, 2vw, 1.5rem);
+    padding-left: clamp(0.75rem, 3vw, 2rem);
+    border-left: 1px solid rgba(44, 40, 38, 0.12);
+  }
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 768px) {
+  .footer__col {
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+}
+
+.footer__heading {
+  font-family: var(--font-display);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+}
+
+.footer__link-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+@media (max-width: 767px) {
+  .footer__link-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-sm) var(--space-md);
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .footer__link-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__link-list {
+    align-items: flex-start;
+  }
+}
+
+.footer__link {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  white-space: nowrap;
   transition: color var(--transition-fast);
 }
 
@@ -40,25 +228,77 @@
   color: var(--color-brand-pink);
 }
 
-.footer__social-link {
-  font-size: 0.95rem;
-  color: var(--color-text-secondary);
-  transition: color var(--transition-fast);
+/* Bottom bar */
+.footer__bar {
+  margin-top: var(--space-md);
+  padding: 0 max(var(--space-xs), 2vw);
 }
 
-.footer__social-link:hover {
-  color: var(--color-brand-pink);
+@media (min-width: 768px) {
+  .footer__bar {
+    padding: 0 var(--space-lg);
+  }
+}
+
+.footer__bar-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-md);
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .footer__bar-main {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md) var(--space-lg);
+    text-align: left;
+  }
 }
 
 .footer__copy {
   font-size: 0.875rem;
   color: var(--color-text-secondary);
+  line-height: 1.45;
+  margin: 0;
+  max-width: 100%;
 }
 
-@media (max-width: 767px) {
-  .footer__inner {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-md);
+@media (max-width: 639px) {
+  .footer__copy {
+    white-space: normal;
   }
+}
+
+@media (min-width: 640px) {
+  .footer__copy {
+    white-space: nowrap;
+  }
+}
+
+.footer__bar-ig {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.footer__bar-ig:hover {
+  color: var(--color-brand-pink);
+}
+
+.footer__ig-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+.footer__bar-ig-label {
+  line-height: 1;
 }
