@@ -59,11 +59,30 @@
 }
 
 @media (max-width: 767px) {
+  .cta-block {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+
   .cta-block__inner {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
+    min-width: 0;
   }
+
   .cta-block__image-wrap {
     order: -1;
+  }
+
+  .cta-block__btn {
+    width: 100%;
+    max-width: 18rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .cta-block {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
   }
 }

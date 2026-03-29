@@ -1,5 +1,6 @@
 .event-card {
   display: block;
+  min-width: 0;
   background: white;
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -87,8 +88,4 @@
 
 .event-card--featured .event-card__image-wrap {
   aspect-ratio: 16/9;
-}
-
-.event-card--featured .event-card__title {
-  font-size: clamp(1.5rem, 3vw, 2rem);
 }

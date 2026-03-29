@@ -7,10 +7,10 @@ export default function About() {
     <div className="about-page">
       <header className="about-page__header">
         <ScrollReveal animation="fade-up">
-          <h1 className="about-page__title">About Art & Cheers</h1>
+          <h1 className="about-page__title">The heart behind Art &amp; Cheers</h1>
           <p className="about-page__tagline">
-            Where art meets celebration, a space for adults to create, connect, and
-            rejuvenate.
+            Where <strong>art</strong> meets <strong>celebration</strong>—a space for adults
+            to <em>create</em>, <em>connect</em>, and <em>rejuvenate</em>.
           </p>
         </ScrollReveal>
       </header>
@@ -23,16 +23,25 @@ export default function About() {
               <img src="/images/about/IMG-20250511-WA0043.png" alt="Mindful creation at an art workshop" className="about-page__photo" />
             </div>
             <p>
-              Art & Cheers is deeply special to me because it began with a quiet, meaningful moment in my own life.
+              Art &amp; Cheers is deeply special to me because it began with a{' '}
+              <strong>quiet, meaningful moment</strong> in my own life.
             </p>
             <p>
-              I discovered the joy of mindful creation at a pottery studio in Dharamkot while spending unhurried time with my mother <span className="about-page__emoji">🌿</span> As we shaped clay with our hands, something within me shifted. The process felt meditative, almost therapeutic. You surrender. You do not know what the result will be. You stop trying to control the outcome.
+              I discovered the joy of <strong>mindful creation</strong> at a pottery studio in{' '}
+              <em>Dharamkot</em> while spending unhurried time with my mother{' '}
+              <span className="about-page__emoji">🌿</span> As we shaped clay with our hands,{' '}
+              <em>something within me shifted.</em> The process felt <strong>meditative</strong>, almost{' '}
+              <strong>therapeutic</strong>. You <strong>surrender</strong>. You do not know what the result
+              will be. You stop trying to control the outcome.
             </p>
             <p>
-              And yet somehow, something beautiful always emerges in the end.
+              And yet somehow, something <strong>beautiful</strong> always emerges in the end.
             </p>
             <p>
-              More than the final piece, it was the feeling that stayed with me. The presence. The bonding. The memory we created together. That simple experience became the seed for Art & Cheers <span className="about-page__emoji">🎨</span>
+              More than the final piece, it was <strong>the feeling</strong> that stayed with me.{' '}
+              <em>The presence. The bonding.</em> The memory we created together. That simple experience
+              became the <strong>seed for Art &amp; Cheers</strong>{' '}
+              <span className="about-page__emoji">🎨</span>
             </p>
           </section>
         </ScrollReveal>
@@ -41,19 +50,34 @@ export default function About() {
           <section className="about-page__section">
             <h2>More Than Just a Paint Session <span className="about-page__emoji">✨</span></h2>
             <p>
-              We are not simply hosting workshops.
+              We are not simply hosting <em>workshops</em>.
             </p>
             <p>
-              We are creating moments <span className="about-page__emoji">💛</span>
+              We are <strong>creating moments</strong> <span className="about-page__emoji">💛</span>
             </p>
             <ul className="about-page__moments">
-              <li><span className="about-page__emoji">🌿</span> Moments where youngsters can unplug from the noise and laugh freely</li>
-              <li><span className="about-page__emoji">💑</span> Moments where couples reconnect and share intentional time together</li>
-              <li><span className="about-page__emoji">🎉</span> Moments where friends create memories that go beyond photos</li>
-              <li><span className="about-page__emoji">👨‍👩‍👧‍👦</span> Moments where families sit side by side, discovering each other in new ways</li>
+              <li>
+                <span className="about-page__emoji">🌿</span>{' '}
+                <strong>Unplugging:</strong> moments where youngsters can step away from the noise and laugh
+                freely
+              </li>
+              <li>
+                <span className="about-page__emoji">💑</span>{' '}
+                <strong>Reconnecting:</strong> moments where couples share intentional time together
+              </li>
+              <li>
+                <span className="about-page__emoji">🎉</span>{' '}
+                <strong>Remembering:</strong> moments where friends create memories that go beyond photos
+              </li>
+              <li>
+                <span className="about-page__emoji">👨‍👩‍👧‍👦</span>{' '}
+                <strong>Discovering:</strong> moments where families sit side by side, seeing each other in new
+                ways
+              </li>
             </ul>
             <p>
-              <span className="about-page__emoji">✨</span> Because art is never just about the final painting.
+              <span className="about-page__emoji">✨</span> Because art is never just about the{' '}
+              <em>final painting</em>.
             </p>
           </section>
         </ScrollReveal>
@@ -70,9 +94,9 @@ export default function About() {
               >
                 Instagram
               </a>{' '}
-              for updates, and check our{' '}
-              <Link to="/events">events page</Link> for upcoming workshops. We&apos;d love
-              to see you there.
+              for updates, and browse our{' '}
+              <Link to="/events">events page</Link> for upcoming workshops.{' '}
+              <em>We&apos;d love to see you there.</em>
             </p>
           </section>
         </ScrollReveal>

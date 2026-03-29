@@ -30,6 +30,8 @@
   font-size: clamp(1.75rem, 4vw, 2.5rem);
   font-weight: 700;
   margin-bottom: var(--space-xs);
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
 
 .event-detail__meta {
@@ -149,8 +151,25 @@
 @media (max-width: 767px) {
   .event-detail__content {
     grid-template-columns: 1fr;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
+
   .event-detail__hero {
     aspect-ratio: 16/9;
+  }
+
+  .event-detail__hero-overlay {
+    padding: var(--space-md) var(--space-md);
+  }
+
+  .event-detail__meta {
+    font-size: 0.9375rem;
+    line-height: 1.45;
+  }
+
+  .event-detail__back {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
 }

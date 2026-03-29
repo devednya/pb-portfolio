@@ -20,16 +20,18 @@ export default function Header() {
         </Link>
 
         <nav className={`header__nav ${menuOpen ? 'header__nav--open' : ''}`}>
-          {navLinks.map(({ to, label }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={({ isActive }) => `header__link ${isActive ? 'header__link--active' : ''}`}
-              onClick={() => setMenuOpen(false)}
-            >
-              {label}
-            </NavLink>
-          ))}
+          <div className="header__nav-links">
+            {navLinks.map(({ to, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) => `header__link ${isActive ? 'header__link--active' : ''}`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {label}
+              </NavLink>
+            ))}
+          </div>
           <Link
             to="/events"
             className="header__cta"
