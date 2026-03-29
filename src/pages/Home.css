@@ -51,7 +51,15 @@
   .home__grid {
     grid-template-columns: 1fr;
   }
+
   .home__grid-featured {
     grid-row: span 1;
+  }
+}
+
+@media (max-width: 479px) {
+  .home__events {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
 }

@@ -37,6 +37,7 @@
   margin: 0 auto;
   columns: 3;
   column-gap: var(--space-md);
+  min-width: 0;
 }
 
 .gallery-photo {
@@ -56,5 +57,16 @@
 @media (max-width: 768px) {
   .gallery-stack {
     columns: 2;
+  }
+}
+
+@media (max-width: 520px) {
+  .gallery-stack {
+    columns: 1;
+  }
+
+  .gallery-page {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
   }
 }

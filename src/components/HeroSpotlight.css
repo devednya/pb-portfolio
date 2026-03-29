@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   padding: var(--space-2xl) var(--space-lg);
+  overflow-x: clip;
   background-color: var(--hero-paper-bg);
   background-image:
     repeating-linear-gradient(
@@ -41,6 +42,7 @@
   z-index: 1;
   max-width: 900px;
   width: 100%;
+  min-width: 0;
   text-align: center;
 }
 
@@ -327,6 +329,27 @@
 
   .hero__title {
     white-space: normal;
+    font-size: clamp(1.85rem, 8vw, 2.75rem);
+  }
+
+  .hero__text {
+    font-size: clamp(1rem, 4vw, 1.2rem);
+    padding: 0 var(--space-xs);
+  }
+
+  .hero__cta {
+    width: 100%;
+    max-width: 20rem;
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+
+  .hero__ctas {
+    flex-direction: column;
+    width: 100%;
+    max-width: 20rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero__collage-wrap {

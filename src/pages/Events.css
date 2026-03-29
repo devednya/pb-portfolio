@@ -37,7 +37,7 @@
 
 .events-page__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   gap: var(--space-xl);
 }
 
@@ -52,4 +52,11 @@
   color: var(--color-text);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+@media (max-width: 479px) {
+  .events-page {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
 }
